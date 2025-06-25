@@ -1,0 +1,14 @@
+fun main() {
+    println("Welcome")
+    println("Please tell me which two numbers you want to add.")
+
+    print("Enter first number: ")
+    var number1 = readLine()!!.toInt()
+
+    print("Enter second number: ")
+    var number2 = readLine()!!.toInt()
+
+    var sum = number1 + number2
+
+    println("the sum of $number1 and $number2 is: $sum")
+}
