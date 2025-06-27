@@ -1,0 +1,52 @@
+fun main() {
+    println("Welcome, time for some quick math! ✨")
+    println("Please enter any two numbers of your choice.")
+
+    print("Enter first number: ")
+    var number1 = readLine()!!.toDouble()
+
+    print("Enter second number: ")
+    var number2 = readLine()!!.toDouble()
+
+    println("What would you like to do?")
+    println("Type + for Addition ➕")
+    println("Type - for Subtraction ➖")
+    println("Type * for Multiplication ✖️")
+    println("Type / for Division ➗")
+
+    print("Enter your choice: ")
+    val operation = readLine()
+
+    var result = 0.0
+    var emoji = ""
+
+    when (operation) {
+        "+" -> {
+            result = number1 + number2
+            emoji = "✅"
+        }
+        "-" -> {
+            result = number1 - number2
+            emoji = "📉"
+        }
+        "*" -> {
+            result = number1 * number2
+            emoji = "✨"
+        }
+        "/" -> {
+            if (number2 != 0.0) {
+                result = number1 / number2
+                emoji = "🔗"
+            } else {
+                println("❌ Error: Cannot divide by zero.")
+                return
+            }
+        }
+        else -> {
+            println("❌ Invalid operation. Please choose +, -, * or /")
+            return
+        }
+    }
+
+    println("Result of $number1 $operation $number2 is: $result $emoji")
+}
