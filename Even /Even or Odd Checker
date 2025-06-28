@@ -1,0 +1,16 @@
+fun main(){
+println("Welcome to the Even or Odd checker")
+
+    print("Enter number1: ")
+    val number1 = readLine()!!.toInt()
+    print("Enter number2: ")
+    val number2 = readLine()!!.toInt()
+
+    val sum = number1 + number2
+println("The sum $number1 and $number2 is: $sum")
+    if(number1 % 2 == 0){
+        println("The result $sum is Even!")
+    }else{
+        println("The result $sum is Odd!")
+    }
+}
