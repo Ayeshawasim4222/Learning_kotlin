@@ -1,0 +1,25 @@
+fun main() {
+    println("🧮 Welcome to the Smart Adder!")
+    println("Please enter two whole numbers to add:")
+
+    print("Enter first number: ")
+    val input1 = readLine()
+    val number1 = input1?.toIntOrNull()
+
+    if (number1 == null || number1 < 0) {
+        println("❌ Invalid input! Please enter a valid positive number.")
+        return
+    }
+
+    print("Enter second number: ")
+    val input2 = readLine()
+    val number2 = input2?.toIntOrNull()
+
+    if (number2 == null || number2 < 0) {
+        println("❌ Invalid input! Please enter a valid positive number.")
+        return
+    }
+
+    val sum = number1 + number2
+    println("✅ The sum of $number1 and $number2 is: $sum ✨")
+}
